@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join us - එක්වන්න</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Join us - එක්වන්න</h1>
+        </div>
+        
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress" id="formProgress"></div>
+            </div>
+        </div>
+        
+        <div class="form-container">
+            <form id="registrationForm">
+                <!-- Personal Information Section -->
+                <div class="section">
+                    <h2 class="section-title">පුද්ගලික තොරතුරු</h2>
+                    
+                    <div class="form-group">
+                        <label class="required">පුද්ගල තත්වය</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="mainType" value="මහතා">
+                                මහතා
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="mainType" value="මහත්මිය">
+                                මහත්මිය
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="mainType" value="මෙනෙවිය">
+                                මෙනෙවිය
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="mainType" value="ආචාර්ය">
+                                ආචාර්ය
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="mainType" value="මහාචාර්ය">
+                                මහාචාර්ය
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="mainType" value="පූජ්‍ය">
+                                පූජ්‍ය
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="mainType" value="Other">
+                                Other
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="name" class="required">නම</label>
+                        <input type="text" id="name" name="name" required placeholder="සම්පූර්ණ නම ඇතුලත් කරන්න">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address" class="required">ලිපිනය</label>
+                        <input type="text" id="address" name="address" required placeholder="ස්ථිර ලිපිනය">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="NIC" class="required">හැඳුනුම්පත් අංකය</label>
+                        <input type="text" id="NIC" name="NIC" required placeholder="ජාතික / විදේශ ගමන් බලපත්‍රය / රියදුරු බලපත්‍රය">
+                        <p class="form-tip">උදා: 123456789V හෝ 200012345678</p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="profession" class="required">වෘත්තීය / රැකියාව/ ව්‍යාපාරය</label>
+                        <input type="text" id="profession" name="profession" required>
+                    </div>
+                </div>
+                
+                <!-- Contact Information Section -->
+                <div class="section">
+                    <h2 class="section-title">සම්බන්ධතා තොරතුරු</h2>
+                    
+                    <div class="two-column">
+                        <div class="form-group">
+                            <label for="mobilePhone" class="required">දුරකථන අංකය (ජංගම)</label>
+                            <input type="text" id="mobilePhone" name="mobilePhone" required placeholder="07X XXX XXXX">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="primaryNumber">දුරකථන අංකය (නිවසේ)</label>
+                            <input type="text" id="primaryNumber" name="primaryNumber" placeholder="Optional">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com">
+                    </div>
+                </div>
+                
+                <!-- Location Information Section -->
+                <div class="section">
+                    <h2 class="section-title">ස්ථාන තොරතුරු</h2>
+                    
+                    <div class="two-column">
+                        <div class="form-group">
+                            <label for="province" class="required">පළාත</label>
+                            <select id="province" name="province" required>
+                                <option value="">තෝරන්න</option>
+                                <option value="western">බස්නාහිර</option>
+                                <option value="central">මධ්‍යම</option>
+                                <option value="southern">දකුණු</option>
+                                <option value="northern">උතුරු</option>
+                                <option value="eastern">නැගෙනහිර</option>
+                                <option value="north-western">වයඹ</option>
+                                <option value="north-central">උතුරු මැද</option>
+                                <option value="uva">ඌව</option>
+                                <option value="sabaragamuwa">සබරගමුව</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="district" class="required">දිස්ත්‍රික්කය</label>
+                            <select id="district" name="district" required>
+                                <option value="">තෝරන්න</option>
+                                <!-- Districts will be populated via JavaScript -->
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="two-column">
+                        <div class="form-group">
+                            <label for="pRadio" class="required">ප්‍රා.ලේ.කො (DS Division)</label>
+                            <select id="pRadio" name="pRadio" required>
+                                <option value="">තෝරන්න</option>
+                                <!-- DS Divisions will be populated via JavaScript -->
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="gRadio" class="required">ග්‍රා.නි.කො (GN Division)</label>
+                            <select id="gRadio" name="gRadio" required>
+                                <option value="">තෝරන්න</option>
+                                <!-- GN Divisions will be populated via JavaScript -->
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="constituency">මැතිවරණ කොට්ඨාශය</label>
+                        <input type="text" id="constituency" name="constituency">
+                    </div>
+                    
+                    <div class="two-column">
+                        <div class="form-group">
+                            <label for="birthCountry">ඉපදුන රට</label>
+                            <input type="text" id="birthCountry" name="birthCountry" placeholder="Sri Lanka">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="livingCountry">දැනට ජීවත්වන රට</label>
+                            <input type="text" id="livingCountry" name="livingCountry" placeholder="Sri Lanka">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Social Media Section -->
+                <div class="section">
+                    <h2 class="section-title">සමාජ මාධ්‍ය විස්තර</h2>
+                    
+                    <div class="form-group">
+                        <label for="facebook">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="social-media-icon" width="24" height="24">
+                            මුහුණු පොතේ ලිපිනය (Facebook)
+                        </label>
+                        <input type="text" id="facebook" name="facebook" placeholder="facebook.com/yourprofile">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="x" >
+                          <img src="https://about.x.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.1920.png" alt="X" class="social-media-icon" width="24" height="24">
+                          X ලිපිනය (X)
+                        </label>
+                        <input type="text" id="x" name="x" placeholder="x.com/yourhandle" class="social-input">
+                      </div>
+                    
+                    <div class="form-group">
+                        <label for="whatsapp">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="social-media-icon" width="24" height="24">
+                            වට්සැප් අංකය (Whatsapp)
+                        </label>
+                        <input type="text" id="whatsapp" name="whatsapp" placeholder="+94 7X XXX XXXX">
+                    </div>
+                </div>
+                
+                <!-- Interests Section -->
+                <div class="section">
+                    <h2 class="section-title">උනන්දුව</h2>
+                    
+                    <div class="form-group">
+                        <label>ඔබට දේශප්‍රේමී ජාතික පෙරමුණට දායක විය හැක්කේ</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="interests[]" value="ක්‍රියාකාරී සාමාජික කටයුතු">
+                                ක්‍රියාකාරී සාමාජික කටයුතු
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="interests[]" value="සෘජු දේශපාලන කටයුතු">
+                                සෘජු දේශපාලන කටයුතු
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="interests[]" value="දේශීය වෙදකම">
+                                දේශීය වෙදකම
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="interests[]" value="ගෙවිතන">
+                                ගෙවිතන
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="interests[]" value="වාරි තාක්ෂණය">
+                                වාරි තාක්ෂණය
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="interests[]" value="දහම් පාසල් හා බෞද්ධ සංස්කෘතික කටයුතු">
+                                දහම් පාසල් හා බෞද්ධ සංස්කෘතික කටයුතු
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="interests[]" value="තරුණ කටයුතු">
+                                තරුණ කටයුතු
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="interests[]" value="අධ්‍යාපන කටයුතු">
+                                අධ්‍යාපන කටයුතු
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="interests[]" value="ව්‍යාපාර කටයුතු">
+                                ව්‍යාපාර කටයුතු
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="interests[]" value="විශ්ව විද්‍යාල සහ තෘතියික අධ්‍යාපන කටයුතු">
+                                විශ්ව විද්‍යාල සහ තෘතියික අධ්‍යාපන කටයුතු
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="interests[]" value="කලා කටයුතු">
+                                කලා කටයුතු
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="interests[]" value="ක්‍රීඩා කටයුතු">
+                                ක්‍රීඩා කටයුතු
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="interests[]" value="වෘත්තීය දායකත්වය">
+                                වෘත්තීය දායකත්වය
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="interests[]" value="විදේශ සබදතා කටයුතු">
+                                විදේශ සබදතා කටයුතු
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="interests[]" value="ඉතිහාසය හා පුරාවිද්‍යා කටයුතු">
+                                ඉතිහාසය හා පුරාවිද්‍යා කටයුතු
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="interests[]" value="ඡායාරූපකරණය සහ වීඩියෝකරණය">
+                                ඡායාරූපකරණය සහ වීඩියෝකරණය
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="interests[]" value="වැඩසටහන් ඉදිරිපත් කිරීම සහ නිවේදන">
+                                වැඩසටහන් ඉදිරිපත් කිරීම සහ නිවේදන
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="interests[]" value="ජනමාධ්‍ය කටයුතු">
+                                ජනමාධ්‍ය කටයුතු
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="interests[]" value="වෙනත්">
+                                වෙනත්
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit Registration</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
