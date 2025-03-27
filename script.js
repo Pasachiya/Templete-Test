@@ -1,4 +1,221 @@
 // Administrative divisions data (sample subset for all 25 districts)
+const constituencyDivisions = {
+    "කොළඹ": [
+        "කොළඹ උතුර",
+        "කොළඹ මධ්‍යම",
+        "කොළඹ දකුණ",
+        "බොරළැස්ගමුව",
+        "දෙහිවල",
+        "රත්මලාන",
+        "කොළොන්නාව",
+        "කෝට්ටේ",
+        "කඩුවෙල",
+        "හෝමාගම",
+        "මහරගම",
+        "කැස්බෑව",
+        "මොරටුව",
+        "අවිස්සාවේල්ල",
+        "පාදුක්ක"
+    ],
+    "ගම්පහ": [
+        "වත්තල",
+        "නිගම්බෝ",
+        "කටුනායක",
+        "ජා-ඇල",
+        "ගම්පහ",
+        "මිනුවන්ගොඩ",
+        "මීරිගම",
+        "දිවුලපිටිය",
+        "කැළණිය",
+        "මහර",
+        "බියගම",
+        "දොම්පේ",
+        "අත්තනගල්ල"
+    ],
+    "කළුතර": [
+        "පානදුර",
+        "බණ්ඩාරගම",
+        "හොරණ",
+        "බුලත්සිංහල",
+        "මතුගම",
+        "කළුතර",
+        "බේරුවල",
+        "අගලවත්ත"
+    ],
+    "මහනුවර": [
+        "ගලගෙදර",
+        "හරිස්පත්තුව",
+        "පතදුම්බර",
+        "කුණ්ඩසාලේ",
+        "සෙන්කඩගල",
+        "මහනුවර",
+        "යටිනුවර",
+        "උඩුනුවර",
+        "තෙල්දෙණිය",
+        "ගම්පොළ",
+        "නාවලපිටිය",
+        "දිගන"
+    ],
+    "මාතලේ": [
+        "දඹුල්ල",
+        "ලග්ගල",
+        "මාතලේ",
+        "රත්තොට"
+    ],
+    "නුවරඑළිය": [
+        "නුවරඑළිය",
+        "මස්කෙළිය",
+        "කොටmale",
+        "වලපනේ",
+        "හඟුරන්කෙත"
+    ],
+    "ගාල්ල": [
+        "ගාල්ල",
+        "අක්මීමන",
+        "බද්දේගම",
+        "බලපිටිය",
+        "කරන්දෙණිය",
+        "හික්කඩුව",
+        "අම්බලන්ගොඩ",
+        "බෙන්තර-ඇල්පිටිය"
+    ],
+    "මාතර": [
+        "දෙනියාය",
+        "හක්මන",
+        "අකුරැස්ස",
+        "කඹුරුපිටිය",
+        "දේවිනුවර",
+        "මාතර",
+        "වැලිගම"
+    ],
+    "හම්බන්තොට": [
+        "මුල්කිරිගල",
+        "බෙලිඅත්ත",
+        "තංගල්ල",
+        "හම්බන්තොට",
+        "තිස්සමහාරාමය"
+    ],
+    "යාපනය": [
+        "කයිට්ස්",
+        "වඩුක්කෝඩ්ඩෙයි",
+        "චාවකච්චේරි",
+        "මන්තෝටම්",
+        "යාපනය",
+        "නල්ලූර්",
+        "උඩුපිඩ්ඩි",
+        "පොයින්ට් පීද්‍රෝ",
+        "කොපායි"
+    ],
+    "කිලිනොච්චි": [
+        "කිලිනොච්චි",
+        "කරච්චි",
+        "පූනරින්",
+        "පල්ලෙයි"
+    ],
+    "මන්නාරම": [
+        "මන්නාරම",
+        "මඩු"
+    ],
+    "වවුනියාව": [
+        "වවුනියාව",
+        "වවුනියාව දකුණ"
+    ],
+    "මුලතිව්": [
+        "මුලතිව්",
+        "වෙඩිතලතිව්"
+    ],
+    "ත්‍රිකුණාමලය": [
+        "සේරුවිල",
+        "ත්‍රිකුණාමලය",
+        "මුතූර්"
+    ],
+    "මඩකලපුව": [
+        "මඩකලපුව",
+        "කල්කුඩා",
+        "පාදිරිප්පු"
+    ],
+    "අම්පාර": [
+        "සම්මන්තුරෙයි",
+        "කල්මුනෙයි",
+        "පොතුවිල්",
+        "අම්පාර",
+        "දිගාමඩුල්ල"
+    ],
+    "කුරුණෑගල": [
+        "ගල්ගමුව",
+        "දොඩන්ගස්ලන්ද",
+        "හිරියාල",
+        "කුලියාපිටිය",
+        "කුරුණෑගල",
+        "මාවතගම",
+        "පොල්ගහවෙල",
+        "පන්නල",
+        "වාරියපොල",
+        "බිංගිරිය",
+        "කටුපොත",
+        "නිකවැරටිය",
+        "යාපහුව",
+        "මහව"
+    ],
+    "පුත්තලම": [
+        "පුත්තලම",
+        "අනමඩුව",
+        "චිලව්",
+        "නාත්තන්ඩිය"
+    ],
+    "අනුරාධපුර": [
+        "මිහින්තලේ",
+        "කැකිරාව",
+        "හොරෝව්පතාන",
+        "අනුරාධපුර නැගෙනහිර",
+        "අනුරාධපුර බටහිර",
+        "කලාවැව",
+        "මැදවච්චිය"
+    ],
+    "පොළොන්නරුව": [
+        "පොළොන්නරුව",
+        "මින්නේරිය",
+        "හිඟුරක්ගොඩ"
+    ],
+    "බදුල්ල": [
+        "මහියංගනය",
+        "බදුල්ල",
+        "හලිඇල",
+        "ඌව පරණගම",
+        "වැලිමඩ",
+        "බණ්ඩාරවෙල",
+        "හපුතලේ",
+        "පස්සර",
+        "වියලුව"
+    ],
+    "මොනරාගල": [
+        "බිබිල",
+        "මොනරාගල",
+        "වැල්ලවාය"
+    ],
+    "රත්නපුර": [
+        "ඇහැලියගොඩ",
+        "රත්නපුර",
+        "බලංගොඩ",
+        "රක්වාන",
+        "නිවිතිගල",
+        "කළවාන",
+        "කිරිඇල්ල",
+        "කොලොන්න"
+    ],
+    "කෑගල්ල": [
+        "දෙදුගල",
+        "ගලිගමුව",
+        "කෑගල්ල",
+        "මාවනැල්ල",
+        "රඹුක්කන",
+        "රුවන්වැල්ල",
+        "යටියන්තොට",
+        "අරණායක",
+        "දඹුල්ල"
+    ]
+};
+
 const administrativeDivisions = {
     "western": {
         "කොළඹ": {
@@ -12385,16 +12602,17 @@ const administrativeDivisions = {
     }
 };
 
-// Populate districts based on selected province
 document.getElementById('province').addEventListener('change', function() {
     const provinceValue = this.value;
     const districtSelect = document.getElementById('district');
     const dsDivisionSelect = document.getElementById('pRadio');
     const gnDivisionSelect = document.getElementById('gRadio');
+    const constituencySelect = document.getElementById('constituency');
     
     districtSelect.innerHTML = '<option value="">තෝරන්න</option>';
     dsDivisionSelect.innerHTML = '<option value="">තෝරන්න</option>';
     gnDivisionSelect.innerHTML = '<option value="">තෝරන්න</option>';
+    constituencySelect.innerHTML = '<option value="">තෝරන්න</option>';
     
     if (provinceValue && administrativeDivisions[provinceValue]) {
         Object.keys(administrativeDivisions[provinceValue]).forEach(district => {
@@ -12407,16 +12625,19 @@ document.getElementById('province').addEventListener('change', function() {
     updateProgress();
 });
 
-// Populate DS Divisions based on selected district
+// Populate DS Divisions and Constituencies based on selected district
 document.getElementById('district').addEventListener('change', function() {
     const provinceValue = document.getElementById('province').value;
     const districtValue = this.value;
     const dsDivisionSelect = document.getElementById('pRadio');
     const gnDivisionSelect = document.getElementById('gRadio');
+    const constituencySelect = document.getElementById('constituency');
     
     dsDivisionSelect.innerHTML = '<option value="">තෝරන්න</option>';
     gnDivisionSelect.innerHTML = '<option value="">තෝරන්න</option>';
+    constituencySelect.innerHTML = '<option value="">තෝරන්න</option>';
     
+    // Populate DS Divisions
     if (provinceValue && districtValue && administrativeDivisions[provinceValue][districtValue]) {
         Object.keys(administrativeDivisions[provinceValue][districtValue].dsDivisions).forEach(dsDivision => {
             const option = document.createElement('option');
@@ -12425,10 +12646,20 @@ document.getElementById('district').addEventListener('change', function() {
             dsDivisionSelect.appendChild(option);
         });
     }
+
+    // Populate Constituencies from constituencyDivisions
+    if (districtValue && constituencyDivisions[districtValue]) {
+        constituencyDivisions[districtValue].forEach(constituency => {
+            const option = document.createElement('option');
+            option.value = constituency;
+            option.textContent = constituency;
+            constituencySelect.appendChild(option);
+        });
+    }
     updateProgress();
 });
 
-// Populate GN Divisions based on selected DS Division
+// Populate GN Divisions based on selected DS Division (unchanged)
 document.getElementById('pRadio').addEventListener('change', function() {
     const provinceValue = document.getElementById('province').value;
     const districtValue = document.getElementById('district').value;
@@ -12448,6 +12679,7 @@ document.getElementById('pRadio').addEventListener('change', function() {
     }
     updateProgress();
 });
+
 
 // Form validation and submission
 document.getElementById('registrationForm').addEventListener('submit', function(e) {
